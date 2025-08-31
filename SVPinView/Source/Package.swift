@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "SVPinView",
     platforms: [
-        .iOS(.v11)
+        .iOS(.v9)
     ],
     products: [
         .library(
@@ -15,7 +15,10 @@ let package = Package(
     targets: [
         .target(
             name: "SVPinView",
-            path: "SVPinView/Source"
+            path: "SVPinView/Source",
+            resources: [
+                .process("XIB's")
+            ]
         )
     ],
     swiftLanguageVersions: [.v5]
